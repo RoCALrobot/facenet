@@ -428,6 +428,7 @@ def extract_face(img, box, image_size=160, margin=0, save_path=None):
     return face
 
 def detect_face(imgs, minsize, pnet, rnet, onet, threshold, factor, device):
+    print('detect face')
     if isinstance(imgs, (np.ndarray, torch.Tensor)):
         if isinstance(imgs,np.ndarray):
             imgs = torch.as_tensor(imgs.copy(), device=device)
